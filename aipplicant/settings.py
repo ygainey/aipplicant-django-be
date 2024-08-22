@@ -54,7 +54,7 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=24),
-    "TOKEN_OBTAIN_SERIALIZER": "jwt_auth.serializers.tokens.CustomeObtainPairSerializer",
+    "TOKEN_OBTAIN_SERIALIZER": "jwt_auth.serializers.tokens.CustomObtainPairSerializer",
 }
 
 MIDDLEWARE = [

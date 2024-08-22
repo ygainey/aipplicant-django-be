@@ -10,7 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         password = data.pop('password')
-        password_conf = data.pop('password_confirmation')
+        password_conf = data.pop('password_conf')
 
         if password != password_conf:
             raise serializers.ValidationError({'password_confirmation': 'Passwords do not match.'})
@@ -24,4 +24,4 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'email', 'username', 'first_name', 'last_name', 'professional_summary', 'password', 'password_confirmation')
+        fields = ('id', 'email', 'username', 'first_name', 'last_name', 'professional_summary', 'password', 'password_conf')

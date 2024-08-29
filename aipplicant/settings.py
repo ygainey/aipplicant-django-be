@@ -18,6 +18,9 @@ from datetime import timedelta
 env = environ.Env()
 environ.Env.read_env()
 
+
+OPENAI_API_KEY = env('OPENAI_API_KEY', default='default_key')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -49,6 +52,7 @@ INSTALLED_APPS = [
     'application',
     'userprofile',
     'corsheaders',
+    'coverletter'
 ]
 
 REST_FRAMEWORK = {

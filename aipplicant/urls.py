@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('jwt_auth.urls')),
     path('application/', include('application.urls')),
-    path('profile/', include('userprofile.urls'))
+    path('profile/', include('userprofile.urls')),
+    path('generate-cover-letter/', include('coverletter.urls'))
 ]

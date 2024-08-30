@@ -88,7 +88,8 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://aipplicant-8e0132de884b.herokuapp.com"
+    "https://aipplicant-8e0132de884b.herokuapp.com",
+    "https://main--aipplicant.netlify.app/"
 ]
 
 ROOT_URLCONF = 'aipplicant.urls'

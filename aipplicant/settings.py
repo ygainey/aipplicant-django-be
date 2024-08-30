@@ -92,6 +92,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://main--aipplicant.netlify.app/"
 ]
 
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_ALL_HEADERS = True
+
 ROOT_URLCONF = 'aipplicant.urls'
 
 TEMPLATES = [

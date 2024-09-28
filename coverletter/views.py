@@ -37,7 +37,7 @@ class GenerateCoverLetterView(APIView):
             try:
                 client = OpenAI(api_key=settings.OPENAI_API_KEY)
                 response = client.chat.completions.create(
-                    model="gpt-3.5-turbo",  # or another appropriate model
+                    model="gpt-3.5-turbo",  
                     messages=[
                         {"role": "system", "content": "You are a helpful assistant that generates cover letters."},
                         {"role": "user", "content": prompt}

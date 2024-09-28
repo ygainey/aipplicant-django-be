@@ -35,9 +35,15 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = [
+#     "https://aipplicant-8e0132de884b.herokuapp.com",
+#     "http://127.0.0.1:8000"
+# ]
+
 ALLOWED_HOSTS = [
-    "https://aipplicant-8e0132de884b.herokuapp.com",
-    "http://127.0.0.1:8000"
+    "aipplicant-8e0132de884b.herokuapp.com",  
+    "aipplicant.netlify.app",
+    "127.0.0.1"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -94,7 +100,26 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOW_ALL_HEADERS = True
+# CORS_ALLOW_ALL_HEADERS = True
+CORS_ALLOW_HEADERS = [
+    'authorization',
+    'content-type',
+    'x-requested-with',
+    'accept',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
 
 ROOT_URLCONF = 'aipplicant.urls'
 
@@ -116,6 +141,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'aipplicant.wsgi.application'
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
